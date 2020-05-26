@@ -3,7 +3,11 @@ chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
     return;
   }
   if(changeInfo.url.includes("facebook")) {
-    alert("You're defaulting to facebook. Get the fuck off of that shit");
+    if(confirm("You're defaulting to facebook. You want to leave, right?")) {
+      chrome.tabs.remove(tab.id, function() { });
+    } else {
+      // Do nothing
+    }
   }
 }); 
 
