@@ -1,4 +1,7 @@
 chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
+  if(!changeInfo.url) {
+    return;
+  }
   if(changeInfo.url.includes("facebook")) {
     alert("You're defaulting to facebook. Get the fuck off of that shit");
   }
