@@ -1,0 +1,12 @@
+{
+  "name" : "Go Away FB",
+  "version" : "0.0.1",
+  "description" : "Yeets FB outa there",
+  "background" : {
+    "scripts": ["background.js"]
+  },
+  "permissions" : [ "idle", "tabs" ],
+  "browser_action" : {
+  },
+  "manifest_version": 2
+}
